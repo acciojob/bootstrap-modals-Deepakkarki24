@@ -7,22 +7,22 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* Vertically center the modal */
-    .modal-dialog {
+    /* Optional: Custom styles for vertical centering */
+    /* .modal-dialog {
       display: flex;
       align-items: center;
       height: 100%;
-    }
+    } */
   </style>
 </head>
 <body>
 
   <!-- Button to open the modal -->
-  <button id="open-modal" class="btn btn-primary">Open Modal</button>
+  <button id="open-modal" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newton-modal">Open Modal</button>
 
   <!-- Modal -->
   <div class="modal fade" id="newton-modal" tabindex="-1" aria-labelledby="newton-modal-label" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered"> <!-- Add modal-dialog-centered class for vertical centering -->
       <div class="modal-content">
         <!-- Modal Header -->
         <div class="modal-header">
@@ -44,14 +44,6 @@
   <!-- Bootstrap JS and Popper.js -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"></script>
-
-  <!-- JavaScript to trigger modal -->
-  <script>
-    document.getElementById('open-modal').addEventListener('click', function() {
-      var myModal = new bootstrap.Modal(document.getElementById('newton-modal'));
-      myModal.show();
-    });
-  </script>
 
 </body>
 </html>
